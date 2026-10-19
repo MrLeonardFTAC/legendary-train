@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tema 2: Sass (SCSS)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Tema 2: Sass (SCSS)</h1>
+
+        <section>
+            <h2>2.1 Variables y anidamiento</h2>
+            <nav class="nav">
+                <a href="#">Inicio</a>
+                <a href="#">Cursos</a>
+                <a href="#">Contacto</a>
+            </nav>
+        </section>
+
+        <section>
+            <h2>2.2 Mixins con parámetros</h2>
+            <a class="btn-primario" href="#">Comprar</a>
+            <a class="btn-claro" href="#">Cancelar</a>
+            <a class="btn-peligro" href="#">Eliminar</a>
+        </section>
+
+        <section>
+            <h2>2.3 Mixin de breakpoints con @content y mapas</h2>
+            <div class="galeria">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>2.4 Bucles con @each e interpolación</h2>
+            <div class="grid-utilidades">
+                <p class="bg-primario texto-blanco">bg-primario</p>
+                <p class="bg-exito texto-blanco">bg-exito</p>
+                <p class="bg-peligro texto-blanco">bg-peligro</p>
+                <p class="texto-primario">texto-primario</p>
+                <p class="texto-exito">texto-exito</p>
+                <p class="texto-peligro">texto-peligro</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>2.5 Organizar con parciales y @use</h2>
+            <article class="tarjeta">
+                <h3>Tarjeta con mixin</h3>
+                <p>Usa el mixin de tarjeta y la variable de color primario.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>2.6 Comandos de Sass (referencia)</h2>
+            <table class="tabla-comandos">
+                <thead>
+                    <tr>
+                        <th>Comando</th>
+                        <th>¿Qué hace?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>npm install -g sass</code></td>
+                        <td>Instala Sass globalmente en tu sistema.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sass estilos.scss estilos.css</code></td>
+                        <td>Compila un archivo SCSS a CSS una sola vez.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sass --watch scss:css</code></td>
+                        <td>Vigila la carpeta scss y recompila automáticamente al guardar.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sass --style=compressed estilos.scss estilos.min.css</code></td>
+                        <td>Genera CSS minificado (sin espacios ni comentarios) para producción.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sass --no-source-map estilos.scss estilos.css</code></td>
+                        <td>Compila sin generar el archivo .map de depuración.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>2.8 Biblioteca de mixins</h2>
+            <div class="centro-demo">Centrado con flex-centro</div>
+            <article class="tarjeta-custom">Tarjeta con mixin personalizado</article>
+            <p class="truncado">Este es un texto muy largo que debe truncarse con puntos suspensivos cuando no quepa en una sola línea usando el mixin texto-truncado.</p>
+        </section>
+
+        <section>
+            <h2>2.9 Utilidades con @each y @for</h2>
+            <div class="grid-margenes">
+                <div class="demo-m-1">m-1</div>
+                <div class="demo-m-2">m-2</div>
+                <div class="demo-m-3">m-3</div>
+                <div class="demo-m-4">m-4</div>
+                <div class="demo-m-5">m-5</div>
+            </div>
+            <div class="grid-anchos">
+                <div class="w-25">w-25</div>
+                <div class="w-50">w-50</div>
+                <div class="w-75">w-75</div>
+                <div class="w-100">w-100</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>2.10 Arquitectura de parciales</h2>
+            <article class="producto-final">
+                <h3 class="producto-final__nombre">Producto demo</h3>
+                <p class="producto-final__precio">$99</p>
+                <p class="producto-final__desc">Organizado en carpetas base/, componentes/ y utilidades/.</p>
+                <button class="btn-final">Comprar</button>
+            </article>
+            <div class="estructura">
+                <pre>scss/
+├── base/
+│   ├── _variables.scss
+│   └── _reset.scss
+├── componentes/
+│   ├── _boton.scss
+│   └── _tarjeta.scss
+├── utilidades/
+│   └── _margenes.scss
+└── main.scss</pre>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,396 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, Arial, sans-serif;
+    line-height: 1.6;
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contenedor {
+    width: min(90%, 1100px);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #2563eb;
+}
+
+.tarjeta {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 400px;
+}
+
+.tarjeta__imagen {
+    display: block;
+    width: 100%;
+}
+
+.tarjeta__titulo {
+    margin: 1rem 1rem 0.25rem;
+}
+
+.tarjeta__texto {
+    margin: 0 1rem 1rem;
+    color: #475569;
+}
+
+.tarjeta__boton {
+    display: block;
+    padding: 0.75rem;
+    background: #2563eb;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.boton {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: #e2e8f0;
+    color: #0f172a;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.boton--primario {
+    background: #2563eb;
+    color: white;
+}
+
+.boton--peligro {
+    background: #dc2626;
+    color: white;
+}
+
+.boton--grande {
+    padding: 0.9rem 1.8rem;
+    font-size: 1.125rem;
+}
+
+.tarjeta-bem {
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-bem__titulo {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+.tarjeta-bem__texto {
+    color: #475569;
+    margin: 0;
+}
+
+.tarjeta-bem--destacada {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.menu {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f1f5f9;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.menu__enlace {
+    color: #2563eb;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: white;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.menu__enlace--activo {
+    background: #2563eb;
+    color: white;
+}
+
+.menu__icono {
+    font-size: 1.2rem;
+}
+
+.widget {
+    padding: 1.5rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.widget__titulo {
+    margin: 0 0 0.5rem;
+    font-size: 1.125rem;
+}
+
+.widget__texto {
+    color: #475569;
+    margin: 0;
+}
+
+.estructura-carpetas {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+}
+
+.estructura-carpetas pre {
+    margin: 0;
+}
+
+.explicacion {
+    color: #475569;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+}
+
+.tabla-clasificacion {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-clasificacion th,
+.tabla-clasificacion td {
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.tabla-clasificacion th {
+    background: #f1f5f9;
+}
+
+.nav-bem {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    background: #0f172a;
+    border-radius: 8px;
+}
+
+.nav-bem__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bem__lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+}
+
+.nav-bem__item {
+    margin: 0;
+}
+
+.nav-bem__enlace {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.nav-bem__enlace:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-bem__enlace--activo {
+    background: #2563eb;
+    color: white;
+}
+
+.nav-bem__boton {
+    padding: 0.5rem 1rem;
+    background: #10b981;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.tarjeta-mod {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+}
+
+.tarjeta-mod__titulo {
+    margin: 0 0 0.5rem;
+}
+
+.tarjeta-mod__texto {
+    color: #475569;
+    margin: 0;
+}
+
+.tarjeta-mod--horizontal {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 1rem;
+    padding: 0;
+}
+
+.tarjeta-mod__imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tarjeta-mod__contenido {
+    padding: 1.5rem;
+}
+
+.tarjeta-mod--destacada {
+    border-color: #2563eb;
+    border-width: 2px;
+    background: #eff6ff;
+}
+
+.tarjeta-mod--oscura {
+    background: #0f172a;
+    color: white;
+    border-color: #334155;
+}
+
+.tarjeta-mod--oscura .tarjeta-mod__texto {
+    color: #cbd5e1;
+}
+
+.comparacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.comparacion__antes,
+.comparacion__despues {
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.comparacion__antes {
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+}
+
+.comparacion__despues {
+    background: #dcfce7;
+    border: 1px solid #bbf7d0;
+}
+
+.comparacion h4 {
+    margin: 0 0 0.5rem;
+    font-size: 0.875rem;
+}
+
+.comparacion code {
+    font-size: 0.75rem;
+    display: block;
+    word-break: break-word;
+}
+
+.producto-final {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+    .producto-final {
+        grid-template-columns: 300px 1fr;
+    }
+}
+
+.producto-final__imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.producto-final__info {
+    padding: 1.5rem;
+}
+
+.producto-final__nombre {
+    margin: 0 0 0.5rem;
+}
+
+.producto-final__precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2563eb;
+    margin: 0 0 0.5rem;
+}
+
+.producto-final__descripcion {
+    color: #475569;
+    margin: 0 0 1rem;
+}
+
+.producto-final__boton {
+    padding: 0.6rem 1.2rem;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.producto-final__boton:hover {
+    background: #1d4ed8;
+}

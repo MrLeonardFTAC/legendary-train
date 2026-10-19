@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portafolio personal de Leo, estudiante de Ingeniería de Sistemas interesado en redes, Linux, hardware y servidores.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Leo | Ingeniería de Sistemas, redes y tecnología</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <div class="contenedor cabecera__interior">
+      <a class="marca" href="#inicio" aria-label="Leo, ir al inicio">leo<span class="marca__punto">.</span></a>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a class="navegacion__enlace" href="#sobre-mi">Sobre mí</a>
+        <a class="navegacion__enlace" href="#intereses">Intereses</a>
+        <a class="navegacion__enlace" href="#proyectos">Proyectos</a>
+        <a class="navegacion__enlace navegacion__enlace--destacado" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero seccion" id="inicio" aria-labelledby="hero-titulo">
+      <div class="contenedor hero__rejilla">
+        <div class="hero__texto">
+          <p class="etiqueta hero__entrada hero__entrada--uno"><span class="estado estado--activo"></span> Estudiante de Ingeniería de Sistemas · UNICA</p>
+          <h1 class="hero__titulo hero__entrada hero__entrada--dos" id="hero-titulo">Entiendo cómo funciona la tecnología. <span>Y me gusta descubrir por qué.</span></h1>
+          <p class="hero__descripcion hero__entrada hero__entrada--tres">Soy Leo, estudiante en Perú y entusiasta del hardware, las redes, Linux y los servidores. Me interesa diagnosticar problemas, aprender cómo funcionan los sistemas y construir soluciones prácticas.</p>
+          <div class="hero__acciones hero__entrada hero__entrada--cuatro">
+            <a class="boton boton--primario" href="#proyectos">Ver proyectos <span aria-hidden="true">↓</span></a>
+            <a class="boton boton--secundario" href="#sobre-mi">Conocer mi perfil</a>
+          </div>
+          <p class="hero__nota">Aprendiendo, probando y documentando cada paso.</p>
+        </div>
+
+        <aside class="perfil" aria-label="Resumen de mi perfil">
+          <div class="perfil__barra"><span></span><span></span><span></span><p>perfil.txt</p></div>
+          <div class="perfil__cuerpo">
+            <div class="perfil__avatar" aria-hidden="true">L<span>.</span></div>
+            <p class="perfil__nombre">Leo</p>
+            <p class="perfil__rol">Estudiante · Entusiasta tecnológico</p>
+            <div class="perfil__separador"></div>
+            <p class="perfil__linea"><span>enfoque</span><strong>Redes + Linux + Hardware</strong></p>
+            <p class="perfil__linea"><span>ubicación</span><strong>Ica, Perú</strong></p>
+            <p class="perfil__linea"><span>mentalidad</span><strong>Aprender haciendo</strong></p>
+            <div class="perfil__etiquetas"><span>Diagnóstico</span><span>Homelab</span><span>Aprendizaje continuo</span></div>
+          </div>
+        </aside>
+      </div>
+      <div class="hero__decoracion" aria-hidden="true"></div>
+    </section>
+
+    <section class="seccion seccion--suave" id="sobre-mi" aria-labelledby="sobre-mi-titulo">
+      <div class="contenedor sobre-mi">
+        <div class="seccion__encabezado">
+          <p class="etiqueta">01 / Sobre mí</p>
+          <h2 class="seccion__titulo" id="sobre-mi-titulo">Curiosidad técnica, enfoque práctico.</h2>
+        </div>
+        <div class="sobre-mi__contenido">
+          <p>Estudio Ingeniería de Sistemas en la Universidad Nacional San Luis Gonzaga (UNICA), en Ica, Perú. Disfruto aprender sobre la parte técnica de la informática: cómo se comunican los equipos, cómo arranca una computadora, cómo se diagnostica una falla y cómo se mantienen servicios funcionando.</p>
+          <p>Mi objetivo es fortalecer mis conocimientos en administración de sistemas, redes y soporte técnico. Prefiero experimentar en laboratorios, comparar resultados y entender las causas en lugar de aplicar soluciones a ciegas.</p>
+          <div class="sobre-mi__datos">
+            <div class="dato"><span class="dato__numero">01</span><span class="dato__texto">Aprender con prácticas</span></div>
+            <div class="dato"><span class="dato__numero">02</span><span class="dato__texto">Diagnosticar antes de cambiar</span></div>
+            <div class="dato"><span class="dato__numero">03</span><span class="dato__texto">Ingreso universitario en 2.º puesto</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="intereses" aria-labelledby="intereses-titulo">
+      <div class="contenedor">
+        <div class="seccion__encabezado seccion__encabezado--centrado">
+          <p class="etiqueta">02 / Áreas de interés</p>
+          <h2 class="seccion__titulo" id="intereses-titulo">Lo que me gusta explorar</h2>
+          <p class="seccion__bajada">Áreas que estudio y practico de forma progresiva.</p>
+        </div>
+        <div class="intereses__rejilla">
+          <article class="interes tarjeta">
+            <span class="interes__icono" aria-hidden="true">01</span>
+            <h3 class="tarjeta__titulo">Hardware y diagnóstico</h3>
+            <p class="tarjeta__texto">Componentes de PC, compatibilidad, BIOS, arranque, temperaturas y búsqueda metódica de fallas.</p>
+            <span class="interes__pie">PC · UEFI · Componentes</span>
+          </article>
+          <article class="interes tarjeta">
+            <span class="interes__icono" aria-hidden="true">02</span>
+            <h3 class="tarjeta__titulo">Redes y conectividad</h3>
+            <p class="tarjeta__texto">Conectividad, direccionamiento IP, latencia, diagnóstico de red y comunicación entre equipos.</p>
+            <span class="interes__pie">TCP/IP · LAN · Diagnóstico</span>
+          </article>
+          <article class="interes tarjeta">
+            <span class="interes__icono" aria-hidden="true">03</span>
+            <h3 class="tarjeta__titulo">Linux y servidores</h3>
+            <p class="tarjeta__texto">Administración de servicios, terminal, contenedores y experimentación con servicios autoalojados.</p>
+            <span class="interes__pie">Linux · Docker · Homelab</span>
+          </article>
+          <article class="interes tarjeta">
+            <span class="interes__icono" aria-hidden="true">04</span>
+            <h3 class="tarjeta__titulo">Ciberseguridad</h3>
+            <p class="tarjeta__texto">Interés en seguridad informática, análisis cuidadoso de comandos y buenas prácticas de protección.</p>
+            <span class="interes__pie">Análisis · Buenas prácticas</span>
+          </article>
+          <article class="interes tarjeta">
+            <span class="interes__icono" aria-hidden="true">05</span>
+            <h3 class="tarjeta__titulo">Automatización y herramientas</h3>
+            <p class="tarjeta__texto">Uso de herramientas para simplificar tareas y organizar información técnica, desde Excel hasta scripts y contenedores.</p>
+            <span class="interes__pie">Excel · Docker · Herramientas</span>
+          </article>
+          <article class="interes tarjeta">
+            <span class="interes__icono" aria-hidden="true">06</span>
+            <h3 class="tarjeta__titulo">IA local y documentación</h3>
+            <p class="tarjeta__texto">Exploración de modelos locales y bases de conocimiento para consultar documentación y casos técnicos.</p>
+            <span class="interes__pie">Modelos locales · RAG · Notas</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion--suave" id="proyectos" aria-labelledby="proyectos-titulo">
+      <div class="contenedor">
+        <div class="seccion__encabezado seccion__encabezado--fila">
+          <div>
+            <p class="etiqueta">03 / Proyectos y prácticas</p>
+            <h2 class="seccion__titulo" id="proyectos-titulo">Aprendizaje llevado a la práctica</h2>
+          </div>
+          <p class="seccion__bajada">Los estados distinguen proyectos académicos de ideas o laboratorios en desarrollo.</p>
+        </div>
+
+        <div class="proyectos__rejilla">
+          <article class="proyecto tarjeta">
+            <div class="proyecto__imagen-wrap">
+              <img class="proyecto__imagen" src="https://picsum.photos/id/180/640/360" srcset="https://picsum.photos/id/180/480/270 480w, https://picsum.photos/id/180/640/360 640w, https://picsum.photos/id/180/960/540 960w" sizes="(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw" width="640" height="360" alt="Computadora portátil sobre un escritorio" loading="lazy">
+              <span class="proyecto__numero">P / 01</span>
+            </div>
+            <div class="proyecto__contenido">
+              <div class="proyecto__meta"><span class="estado estado--academico"></span> Proyecto académico</div>
+              <h3 class="tarjeta__titulo">Registro de incidencias informáticas</h3>
+              <p class="tarjeta__texto">Propuesta desarrollada en Excel con macros para organizar las incidencias de soporte informático de una universidad, registrar problemas y facilitar el seguimiento.</p>
+              <ul class="etiquetas" aria-label="Tecnologías utilizadas"><li>Excel</li><li>Macros</li><li>Soporte TI</li></ul>
+            </div>
+          </article>
+
+          <article class="proyecto tarjeta">
+            <div class="proyecto__imagen-wrap">
+              <img class="proyecto__imagen" src="https://picsum.photos/id/0/640/360" srcset="https://picsum.photos/id/0/480/270 480w, https://picsum.photos/id/0/640/360 640w, https://picsum.photos/id/0/960/540 960w" sizes="(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw" width="640" height="360" alt="Computadora portátil para trabajo técnico" loading="lazy">
+              <span class="proyecto__numero">P / 02</span>
+            </div>
+            <div class="proyecto__contenido">
+              <div class="proyecto__meta"><span class="estado estado--proceso"></span> En exploración</div>
+              <h3 class="tarjeta__titulo">Laboratorio personal de servicios</h3>
+              <p class="tarjeta__texto">Plan de laboratorio para aprender administración de Linux, contenedores y servicios autoalojados. El enfoque es probar cada servicio, documentar su configuración y entender sus requisitos.</p>
+              <ul class="etiquetas" aria-label="Tecnologías de interés"><li>Linux</li><li>Docker</li><li>Servidores</li></ul>
+            </div>
+          </article>
+
+          <article class="proyecto tarjeta">
+            <div class="proyecto__imagen-wrap">
+              <img class="proyecto__imagen" src="https://picsum.photos/id/3/640/360" srcset="https://picsum.photos/id/3/480/270 480w, https://picsum.photos/id/3/640/360 640w, https://picsum.photos/id/3/960/540 960w" sizes="(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw" width="640" height="360" alt="Cuaderno y herramientas de trabajo" loading="lazy">
+              <span class="proyecto__numero">P / 03</span>
+            </div>
+            <div class="proyecto__contenido">
+              <div class="proyecto__meta"><span class="estado estado--proceso"></span> Investigación personal</div>
+              <h3 class="tarjeta__titulo">Base de conocimiento técnica</h3>
+              <p class="tarjeta__texto">Idea en investigación para reunir documentación técnica y casos de diagnóstico, de modo que sea más fácil consultar procedimientos, comparar síntomas y registrar aprendizajes.</p>
+              <ul class="etiquetas" aria-label="Tecnologías de interés"><li>Documentación</li><li>IA local</li><li>Diagnóstico</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="aprendizaje" aria-labelledby="aprendizaje-titulo">
+      <div class="contenedor aprendizaje">
+        <div class="seccion__encabezado">
+          <p class="etiqueta">04 / Formación</p>
+          <h2 class="seccion__titulo" id="aprendizaje-titulo">En constante aprendizaje</h2>
+          <p class="seccion__bajada">Consolidando fundamentos antes de pasar a proyectos cada vez más complejos.</p>
+        </div>
+        <div class="aprendizaje__lista">
+          <article class="aprendizaje__item">
+            <span class="aprendizaje__punto" aria-hidden="true"></span>
+            <div><h3>Ingeniería de Sistemas</h3><p>Formación universitaria · Perú</p></div>
+            <span class="aprendizaje__estado">En curso</span>
+          </article>
+          <article class="aprendizaje__item">
+            <span class="aprendizaje__punto" aria-hidden="true"></span>
+            <div><h3>Ruta de aprendizaje CSS</h3><p>Fundamentos, layout, responsive, animaciones y herramientas</p></div>
+            <span class="aprendizaje__estado">Práctica</span>
+          </article>
+          <article class="aprendizaje__item">
+            <span class="aprendizaje__punto" aria-hidden="true"></span>
+            <div><h3>Redes, Linux y administración de sistemas</h3><p>Estudio independiente y laboratorios personales</p></div>
+            <span class="aprendizaje__estado">En progreso</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacto" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="contenedor contacto__interior">
+        <div>
+          <p class="etiqueta etiqueta--clara">05 / Contacto</p>
+          <h2 class="contacto__titulo" id="contacto-titulo">¿Hablamos de tecnología?</h2>
+          <p class="contacto__texto">Me interesa conectar con personas que disfruten aprender, resolver problemas y compartir conocimientos técnicos.</p>
+        </div>
+        <div class="contacto__acciones">
+          <a class="boton boton--claro" href="mailto:tu-correo@ejemplo.com">Escríbeme por correo</a>
+          <p class="contacto__nota">Antes de publicar, reemplaza este correo por el tuyo.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+      <a class="marca marca--pie" href="#inicio">leo<span class="marca__punto">.</span></a>
+      <p>Hecho con HTML y CSS, con curiosidad y ganas de aprender.</p>
+      <a class="pie__arriba" href="#inicio">Volver arriba ↑</a>
+    </div>
+  </footer>
+</body>
+</html>

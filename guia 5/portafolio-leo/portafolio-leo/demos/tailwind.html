@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demostración de la galería del portafolio de Leo con Tailwind CSS.">
+  <title>Galería con Tailwind CSS | Leo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 antialiased">
+  <header class="border-b border-slate-800 bg-slate-900">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-5">
+      <a href="#inicio" class="text-2xl font-extrabold tracking-tight">leo<span class="text-sky-400">.</span></a>
+      <a href="#proyectos" class="rounded-full border border-slate-700 px-4 py-2 text-sm font-semibold transition hover:border-sky-400 hover:text-sky-300">Proyectos</a>
+    </div>
+  </header>
+  <main id="inicio" class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+    <section class="mb-10 max-w-3xl">
+      <p class="text-sm font-bold uppercase tracking-[0.18em] text-sky-400">Sección desarrollada con Tailwind CSS</p>
+      <h1 class="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">Proyectos y prácticas</h1>
+      <p class="mt-4 max-w-2xl leading-7 text-slate-300">Una muestra de proyectos académicos y áreas que estoy explorando como estudiante de Ingeniería de Sistemas.</p>
+    </section>
+    <section id="proyectos" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" aria-label="Galería de proyectos">
+      <article class="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-lg transition duration-300 hover:-translate-y-1 hover:border-sky-500">
+        <img class="h-48 w-full object-cover" src="https://picsum.photos/id/180/640/360" alt="Computadora portátil sobre un escritorio" width="640" height="360" loading="lazy">
+        <div class="p-5">
+          <p class="text-xs font-bold uppercase tracking-wider text-sky-400">Proyecto académico</p>
+          <h2 class="mt-3 text-xl font-bold">Registro de incidencias TI</h2>
+          <p class="mt-3 text-sm leading-6 text-slate-300">Libro de Excel con macros para organizar incidencias de soporte informático en un contexto universitario.</p>
+          <div class="mt-5 flex flex-wrap gap-2"><span class="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300">Excel</span><span class="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300">Macros</span></div>
+        </div>
+      </article>
+      <article class="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-lg transition duration-300 hover:-translate-y-1 hover:border-sky-500">
+        <img class="h-48 w-full object-cover" src="https://picsum.photos/id/0/640/360" alt="Computadora portátil para trabajo técnico" width="640" height="360" loading="lazy">
+        <div class="p-5">
+          <p class="text-xs font-bold uppercase tracking-wider text-amber-300">En exploración</p>
+          <h2 class="mt-3 text-xl font-bold">Laboratorio de servicios</h2>
+          <p class="mt-3 text-sm leading-6 text-slate-300">Práctica planificada sobre Linux, contenedores y servicios autoalojados con documentación de cada paso.</p>
+          <div class="mt-5 flex flex-wrap gap-2"><span class="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300">Linux</span><span class="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300">Docker</span></div>
+        </div>
+      </article>
+      <article class="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-lg transition duration-300 hover:-translate-y-1 hover:border-sky-500">
+        <img class="h-48 w-full object-cover" src="https://picsum.photos/id/3/640/360" alt="Cuaderno y herramientas de trabajo" width="640" height="360" loading="lazy">
+        <div class="p-5">
+          <p class="text-xs font-bold uppercase tracking-wider text-amber-300">Investigación personal</p>
+          <h2 class="mt-3 text-xl font-bold">Conocimiento técnico</h2>
+          <p class="mt-3 text-sm leading-6 text-slate-300">Idea para organizar documentación de reparación y registrar síntomas, pruebas y conclusiones de diagnóstico.</p>
+          <div class="mt-5 flex flex-wrap gap-2"><span class="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300">Documentación</span><span class="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300">IA local</span></div>
+        </div>
+      </article>
+    </section>
+    <p class="mt-10 text-sm text-slate-400">Demostración educativa. Esta página carga Tailwind desde internet y no requiere un archivo CSS propio.</p>
+  </main>
+  <footer class="border-t border-slate-800 px-5 py-6 text-center text-sm text-slate-400">Leo · Portafolio personal</footer>
+</body>
+</html>

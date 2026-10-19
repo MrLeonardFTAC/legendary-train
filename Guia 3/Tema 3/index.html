@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tema 3: Imágenes y medios responsive</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Tema 3: Imágenes y medios responsive</h1>
+
+        <section>
+            <h2>3.1 Imagen fluida</h2>
+            <img src="https://picsum.photos/1600/1000?random=1" alt="Montañas al amanecer" width="1600" height="1000" class="img-fluida">
+        </section>
+
+        <section>
+            <h2>3.2 Tarjetas con imágenes uniformes</h2>
+            <div class="galeria-uniforme">
+                <img class="foto-uniforme" src="https://picsum.photos/400/600?random=2" alt="Foto A">
+                <img class="foto-uniforme" src="https://picsum.photos/600/400?random=3" alt="Foto B">
+                <img class="foto-uniforme" src="https://picsum.photos/500/500?random=4" alt="Foto C">
+            </div>
+        </section>
+
+        <section>
+            <h2>3.3 srcset y sizes</h2>
+            <img src="https://picsum.photos/800/600?random=5" 
+                 srcset="https://picsum.photos/400/300?random=5 400w,
+                         https://picsum.photos/800/600?random=5 800w,
+                         https://picsum.photos/1600/1200?random=5 1600w"
+                 sizes="(min-width: 900px) 33vw, 100vw"
+                 alt="Descripción de la foto" class="img-srcset">
+        </section>
+
+        <section>
+            <h2>3.4 Elemento picture: dirección de arte</h2>
+            <picture class="picture-arte">
+                <source media="(min-width: 800px)" srcset="https://picsum.photos/1200/600?random=6">
+                <img src="https://picsum.photos/600/800?random=7" alt="Portada">
+            </picture>
+        </section>
+
+        <section>
+            <h2>3.5 Video y mapas incrustados 16:9</h2>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video de ejemplo" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.6 Galería uniforme (object-fit)</h2>
+            <div class="galeria-object-fit">
+                <img class="fit-fill" src="https://picsum.photos/400/600?random=8" alt="fill">
+                <img class="fit-contain" src="https://picsum.photos/400/600?random=9" alt="contain">
+                <img class="fit-cover" src="https://picsum.photos/400/600?random=10" alt="cover">
+                <img class="fit-none" src="https://picsum.photos/400/600?random=11" alt="none">
+                <img class="fit-cover" src="https://picsum.photos/600/400?random=12" alt="cover 2">
+                <img class="fit-cover" src="https://picsum.photos/500/500?random=13" alt="cover 3">
+            </div>
+            <table class="tabla-comportamiento">
+                <thead>
+                    <tr>
+                        <th>object-fit</th>
+                        <th>Comportamiento observado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>fill</td>
+                        <td>La imagen se estira para llenar la caja, deformándose si la proporción no coincide.</td>
+                    </tr>
+                    <tr>
+                        <td>contain</td>
+                        <td>La imagen se muestra completa dentro de la caja, manteniendo su proporción, con márgenes.</td>
+                    </tr>
+                    <tr>
+                        <td>cover</td>
+                        <td>La imagen llena toda la caja manteniendo su proporción, recortando lo que sobra.</td>
+                    </tr>
+                    <tr>
+                        <td>none</td>
+                        <td>La imagen se muestra en su tamaño original, sin escalarse, recortándose si es más grande que la caja.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>3.7 Imagen con srcset (Documentación)</h2>
+            <img src="https://picsum.photos/800/600?random=14" 
+                 srcset="https://picsum.photos/400/300?random=14 400w,
+                         https://picsum.photos/800/600?random=14 800w,
+                         https://picsum.photos/1600/1200?random=14 1600w"
+                 sizes="(min-width: 900px) 33vw, 100vw"
+                 alt="Prueba de srcset" class="img-srcset-prueba">
+            <ul class="documentacion-srcset">
+                <li><strong>375 px:</strong> Descarga el archivo de 400w (o 800w en pantallas retina), ya que es el más cercano al ancho necesario (100vw = 375px).</li>
+                <li><strong>1280 px:</strong> Descarga el archivo de 800w, ya que sizes indica 33vw (aprox. 426px), y 800w es el más cercano por encima para garantizar calidad.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3.8 Hero con picture</h2>
+            <picture class="hero-picture">
+                <source media="(min-width: 800px)" srcset="https://picsum.photos/1200/600?random=15">
+                <img src="https://picsum.photos/600/800?random=16" alt="Hero responsive" class="hero-img">
+            </picture>
+        </section>
+
+        <section>
+            <h2>3.9 Contenido incrustado (Video y Mapa)</h2>
+            <div class="multimedia-grid">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video" allowfullscreen></iframe>
+                </div>
+                <div class="mapa-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.0!2d-77.0!3d-12.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDAwJzAwLjAiUCA3N8KwMDAnMDAuMCJX!5e0!3m2!1ses!2spe!4v1700000000000" title="Mapa" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.10 Avatar circular</h2>
+            <div class="perfil">
+                <img src="https://picsum.photos/300/300?random=17" alt="Foto de perfil" class="avatar">
+                <div class="perfil-info">
+                    <h3>María López</h3>
+                    <p>Diseñadora UX/UI con 8 años de experiencia creando interfaces accesibles y centradas en el usuario.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

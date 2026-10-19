@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tema 5: Variables CSS y modo oscuro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Tema 5: Variables CSS y modo oscuro</h1>
+
+        <section>
+            <h2>5.1 Declarar y usar variables</h2>
+            <a class="boton" href="#">Comprar</a>
+        </section>
+
+        <section>
+            <h2>5.2 Alcance local y valor de respaldo</h2>
+            <a class="boton" href="#">Normal</a>
+            <div class="tarjeta-verde">
+                <a class="boton" href="#">En tarjeta verde</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>5.3 Tokens de diseño semánticos</h2>
+            <article class="tarjeta">
+                <h3>Título</h3>
+                <p>Texto de la tarjeta.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>5.4 Modo oscuro automático</h2>
+            <article class="tarjeta">
+                <h3>Hola, modo oscuro</h3>
+                <p>Cambia el tema del sistema para verlo.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>5.5 Botón para alternar el tema</h2>
+            <button id="tema">Cambiar tema</button>
+            <h3>Mi página</h3>
+            <p>Texto de ejemplo.</p>
+        </section>
+
+        <section>
+            <h2>5.6 Sistema de colores con variables</h2>
+            <a class="btn-sistema" href="#">Botón</a>
+            <article class="card-sistema">
+                <h3>Tarjeta</h3>
+                <p>Texto de la tarjeta.</p>
+            </article>
+            <div class="alerta-exito">✅ Operación exitosa.</div>
+            <div class="alerta-error">❌ Ha ocurrido un error.</div>
+        </section>
+
+        <section>
+            <h2>5.7 Tres temas de color</h2>
+            <div class="grid-temas">
+                <div class="contenedor-tema tema-azul">
+                    <h3>Tema Azul</h3>
+                    <button class="btn-tema-color">Acción</button>
+                </div>
+                <div class="contenedor-tema tema-verde">
+                    <h3>Tema Verde</h3>
+                    <button class="btn-tema-color">Acción</button>
+                </div>
+                <div class="contenedor-tema tema-naranja">
+                    <h3>Tema Naranja</h3>
+                    <button class="btn-tema-color">Acción</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>5.8 Modo oscuro de un sitio completo</h2>
+            <p>El modo oscuro ya está aplicado a toda la página mediante <code>prefers-color-scheme</code>.</p>
+            <article class="tarjeta">
+                <h3>Tarjeta de prueba</h3>
+                <p>Verifica el contraste en ambos modos.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>5.9 Recordar la elección del usuario</h2>
+            <button id="tema-local">Cambiar tema (con localStorage)</button>
+            <p>Recarga la página: el tema elegido se mantiene.</p>
+        </section>
+
+        <section>
+            <h2>5.10 Tokens de espaciado y tipografía</h2>
+            <div class="landing-fluida">
+                <h1 class="titulo-fluido">Landing con escala fluida</h1>
+                <p class="texto-fluido">El espaciado y el tamaño de texto crecen con clamp() y variables.</p>
+                <a href="#" class="btn-fluido">Empezar ahora</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const raiz = document.documentElement;
+        const boton = document.querySelector("#tema");
+        const sistemaOscuro = matchMedia("(prefers-color-scheme: dark)");
+
+        boton.addEventListener("click", () => {
+            const actual = raiz.dataset.theme || (sistemaOscuro.matches ? "dark" : "light");
+            raiz.dataset.theme = actual === "dark" ? "light" : "dark";
+        });
+
+        const botonLocal = document.querySelector("#tema-local");
+        const temaGuardado = localStorage.getItem("tema");
+        if (temaGuardado) {
+            raiz.setAttribute("data-theme", temaGuardado);
+        }
+
+        botonLocal.addEventListener("click", () => {
+            const actual = raiz.getAttribute("data-theme") || (sistemaOscuro.matches ? "dark" : "light");
+            const nuevo = actual === "dark" ? "light" : "dark";
+            raiz.setAttribute("data-theme", nuevo);
+            localStorage.setItem("tema", nuevo);
+        });
+    </script>
+</body>
+</html>

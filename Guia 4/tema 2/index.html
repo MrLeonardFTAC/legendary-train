@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tema 2: Sombras, gradientes y filtros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Tema 2: Sombras, gradientes y filtros</h1>
+
+        <section>
+            <h2>2.1 box-shadow: elevación, hundido y anillo</h2>
+            <div class="caja elevada">Elevada</div>
+            <div class="caja hundida">Hundida</div>
+            <div class="caja anillo">Anillo</div>
+        </section>
+
+        <section>
+            <h2>2.2 text-shadow: legibilidad y neón</h2>
+            <h1 class="titulo-legible">Título legible</h1>
+            <h1 class="neon">NEÓN</h1>
+        </section>
+
+        <section>
+            <h2>2.3 Degradados lineales y rayas</h2>
+            <a class="boton-degradado" href="#">Degradado</a>
+            <div class="rayas"></div>
+            <div class="bandera"></div>
+        </section>
+
+        <section>
+            <h2>2.4 Degradados radiales y cónicos</h2>
+            <div class="esfera"></div>
+            <div class="pastel"></div>
+        </section>
+
+        <section>
+            <h2>2.5 filter y backdrop-filter</h2>
+            <div class="galeria-filtros-ejemplo">
+                <img class="foto" src="https://picsum.photos/400/300?random=20" alt="Paisaje">
+            </div>
+            <div class="fondo">
+                <div class="vidrio">Tarjeta de vidrio</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>2.6 Descifra las sombras</h2>
+            <table class="tabla-sombras">
+                <thead>
+                    <tr>
+                        <th>Valor de box-shadow</th>
+                        <th>¿Qué se ve?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>0 4px 12px rgba(0,0,0,.2)</code></td>
+                        <td>Sombra suave hacia abajo, efecto de elevación ligera.</td>
+                    </tr>
+                    <tr>
+                        <td><code>0 0 0 3px #2563eb</code></td>
+                        <td>Anillo azul sólido alrededor del elemento, sin desenfoque.</td>
+                    </tr>
+                    <tr>
+                        <td><code>inset 0 0 10px #000</code></td>
+                        <td>Sombra interior oscura, efecto hundido o cóncavo.</td>
+                    </tr>
+                    <tr>
+                        <td><code>10px 10px 0 #111</code></td>
+                        <td>Sombra dura desplazada (estilo cómic o retro), sin desenfoque.</td>
+                    </tr>
+                    <tr>
+                        <td><code>0 0 20px 5px #22d3ee</code></td>
+                        <td>Halo luminoso cian alrededor del elemento, efecto neón o glow.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="demo-sombras">
+                <div class="sombra-demo sombra-1"></div>
+                <div class="sombra-demo sombra-2"></div>
+                <div class="sombra-demo sombra-3"></div>
+                <div class="sombra-demo sombra-4"></div>
+                <div class="sombra-demo sombra-5"></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>2.7 Escala de elevación</h2>
+            <div class="grid-elevacion">
+                <div class="tarjeta-elevacion nivel-1">Nivel 1</div>
+                <div class="tarjeta-elevacion nivel-2">Nivel 2</div>
+                <div class="tarjeta-elevacion nivel-3">Nivel 3</div>
+                <div class="tarjeta-elevacion nivel-4">Nivel 4</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>2.8 Colección de botones</h2>
+            <div class="grid-botones">
+                <button class="btn-lineal">Degradado Lineal</button>
+                <button class="btn-radial">Degradado Radial</button>
+                <button class="btn-borde-degradado">Borde Degradado</button>
+                <button class="btn-duro">Sombra Dura</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>2.9 Gráficos con CSS puro</h2>
+            <div class="grid-graficos">
+                <div class="grafico-circular" data-p1="40" data-p2="35" data-p3="25"></div>
+                <div class="grafico-donut"></div>
+                <div class="barra-progreso">
+                    <div class="barra-relleno"></div>
+                </div>
+            </div>
+            <p class="leyenda">Categorías: Azul 40% · Amarillo 35% · Verde 25%</p>
+        </section>
+
+        <section>
+            <h2>2.10 Galería con filtros</h2>
+            <div class="galeria-filtros">
+                <figure class="foto-filtro">
+                    <img src="https://picsum.photos/400/300?random=31" alt="Grayscale">
+                    <figcaption>grayscale</figcaption>
+                </figure>
+                <figure class="foto-filtro">
+                    <img src="https://picsum.photos/400/300?random=32" alt="Sepia">
+                    <figcaption>sepia</figcaption>
+                </figure>
+                <figure class="foto-filtro">
+                    <img src="https://picsum.photos/400/300?random=33" alt="Blur">
+                    <figcaption>blur</figcaption>
+                </figure>
+                <figure class="foto-filtro">
+                    <img src="https://picsum.photos/400/300?random=34" alt="Brightness">
+                    <figcaption>brightness</figcaption>
+                </figure>
+                <figure class="foto-filtro">
+                    <img src="https://picsum.photos/400/300?random=35" alt="Hue-rotate">
+                    <figcaption>hue-rotate</figcaption>
+                </figure>
+                <figure class="foto-filtro">
+                    <img src="https://picsum.photos/400/300?random=36" alt="Saturate">
+                    <figcaption>saturate</figcaption>
+                </figure>
+            </div>
+            <div class="fondo">
+                <div class="vidrio">Tarjeta de vidrio sobre galería</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

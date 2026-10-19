@@ -1,0 +1,40 @@
+@use "variables" as v;
+@use "sass:map";
+
+@mixin boton($fondo, $texto: white) {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    background: $fondo;
+    color: $texto;
+    border-radius: 8px;
+    text-decoration: none;
+    
+    &:hover {
+        background: rgba($fondo, 0.85);
+    }
+}
+
+@mixin desde($nombre) {
+    @media (min-width: map.get(v.$breakpoints, $nombre)) {
+        @content;
+    }
+}
+
+@mixin tarjeta($radio: 12px, $sombra: 1px solid #e2e8f0) {
+    padding: v.$espacio;
+    border: $sombra;
+    border-radius: $radio;
+}
+
+@mixin flex-centro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin texto-truncado($max-width: 100%) {
+    max-width: $max-width;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

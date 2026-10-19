@@ -1,0 +1,40 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --bs-primary: #6366f1;
+    --bs-primary-rgb: 99, 102, 241;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.btn-primary {
+    --bs-btn-bg: #6366f1;
+    --bs-btn-border-color: #6366f1;
+    --bs-btn-hover-bg: #4f46e5;
+    --bs-btn-hover-border-color: #4f46e5;
+    --bs-btn-active-bg: #4338ca;
+    --bs-btn-active-border-color: #4338ca;
+}
+
+.bg-primary {
+    background-color: #6366f1 !important;
+}
+
+.text-primary {
+    color: #6366f1 !important;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #6366f1;
+    --bs-btn-border-color: #6366f1;
+    --bs-btn-hover-bg: #6366f1;
+    --bs-btn-hover-border-color: #6366f1;
+}
+
+.navbar-dark.bg-primary {
+    background-color: #6366f1 !important;
+}

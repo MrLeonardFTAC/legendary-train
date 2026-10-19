@@ -1,0 +1,238 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.6;
+  padding: 1rem;
+  background: #f8fafc;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h2 {
+  border-bottom: 2px solid #ccc;
+  margin-top: 2rem;
+}
+
+.fijo {
+  width: 960px;
+  background: #fecaca;
+}
+
+.fluido {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  background: #bbf7d0;
+}
+
+.tarjetas {
+  display: grid;
+  gap: 1rem;
+}
+
+.tarjeta {
+  padding: 2rem;
+  background: #c7d2fe;
+  border-radius: 8px;
+}
+
+@media (min-width: 600px) {
+  .tarjetas { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .tarjetas { grid-template-columns: repeat(3, 1fr); }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background: #0f172a;
+}
+
+.menu a {
+  padding: 0.9rem 1rem;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #1e293b;
+}
+
+@media (min-width: 768px) {
+  .menu { flex-direction: row; gap: 0.5rem; }
+  .menu a { border-bottom: 0; }
+}
+
+.form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 480px;
+}
+
+.form input,
+.form button {
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+}
+
+.form button {
+  background: #2563eb;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+}
+
+.mi-contenedor {
+  width: 960px;
+  height: 1200px;
+  background-color: #f0f0f0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Antes (causaba scroll):
+.fijo { width: 960px; }
+.img-grande { width: 1200px; }
+*/
+
+/* Después (Diseño fluido): */
+.fijo {
+  width: 100%;
+  max-width: 960px; /* Tope en pantallas grandes */
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.img-grande {
+  max-width: 100%; /* Nunca desborda el contenedor */
+  height: auto;    /* Mantiene proporción */
+  display: block;
+}
+
+/* Estilos base (Móvil: apilado) */
+.perfil {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+.perfil__foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  align-self: center;
+}
+
+/* Tablet/Desktop (Desde 600px) */
+@media (min-width: 600px) {
+  .perfil {
+    flex-direction: row; /* Foto a la izquierda, texto a la derecha */
+    align-items: center;
+  }
+  .perfil__foto {
+    margin-right: 1.5rem;
+  }
+}
+
+.contacto {
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.contacto label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+/* Áreas táctiles y tipografía para evitar zoom en iOS */
+.contacto input, 
+.contacto textarea, 
+.contacto button {
+  width: 100%;
+  min-height: 44px; /* Tamaño táctil recomendado */
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem; /* 16px evita el zoom automático en Safari */
+  box-sizing: border-box;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.btn-enviar {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Desde 700px: Nombre y Correo en 2 columnas */
+@media (min-width: 700px) {
+  .contacto {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* El mensaje y el botón ocupan las dos columnas */
+  .campo-full, .btn-enviar {
+    grid-column: 1 / -1; 
+  }
+}
+
+/* Base (Móvil) */
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #0f172a;
+  color: white;
+  padding: 1rem;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* Escritorio (Desde 768px) */
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    margin-bottom: 0;
+  }
+  .nav {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  .nav a {
+    border-bottom: none;
+  }
+}

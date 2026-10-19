@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tema 3: Metodología BEM y organización del CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Tema 3: Metodología BEM y organización del CSS</h1>
+
+        <section>
+            <h2>3.1 Nombrar una tarjeta con BEM</h2>
+            <article class="tarjeta">
+                <img class="tarjeta__imagen" src="https://picsum.photos/400/200?random=60" alt="">
+                <h3 class="tarjeta__titulo">Zapatillas</h3>
+                <p class="tarjeta__texto">Cómodas y ligeras.</p>
+                <a class="tarjeta__boton" href="#">Ver más</a>
+            </article>
+        </section>
+
+        <section>
+            <h2>3.2 Modificadores y variantes</h2>
+            <a class="boton" href="#">Normal</a>
+            <a class="boton boton--primario" href="#">Primario</a>
+            <a class="boton boton--primario boton--grande" href="#">Grande</a>
+            <a class="boton boton--peligro" href="#">Eliminar</a>
+        </section>
+
+        <section>
+            <h2>3.3 BEM con anidamiento nativo</h2>
+            <article class="tarjeta-bem">
+                <h3 class="tarjeta-bem__titulo">Título</h3>
+                <p class="tarjeta-bem__texto">Texto de la tarjeta.</p>
+            </article>
+            <article class="tarjeta-bem tarjeta-bem--destacada">
+                <h3 class="tarjeta-bem__titulo">Destacada</h3>
+                <p class="tarjeta-bem__texto">Tarjeta con modificador.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>3.4 Refactorizar un CSS desordenado</h2>
+            <nav class="menu">
+                <a class="menu__enlace menu__enlace--activo" href="#">
+                    <span class="menu__icono">★</span> Inicio
+                </a>
+                <a class="menu__enlace" href="#">
+                    <span class="menu__icono">★</span> Contacto
+                </a>
+            </nav>
+            <aside class="widget">
+                <h3 class="widget__titulo">Novedades</h3>
+                <p class="widget__texto">Contenido del widget.</p>
+            </aside>
+        </section>
+
+        <section>
+            <h2>3.5 Estructura de carpetas y capas</h2>
+            <div class="estructura-carpetas">
+                <pre>css/
+├── main.css
+├── base/
+│   ├── reset.css
+│   └── tipografia.css
+├── layout/
+│   └── cuadricula.css
+├── componentes/
+│   ├── boton.css
+│   └── tarjeta.css
+└── utilidades/
+    └── utilidades.css</pre>
+            </div>
+            <p class="explicacion">El orden de carpetas va de lo más general (reset, base) a lo más específico (utilidades). Las capas evitan conflictos de especificidad.</p>
+        </section>
+
+        <section>
+            <h2>3.6 Clasificar clases BEM</h2>
+            <table class="tabla-clasificacion">
+                <thead>
+                    <tr>
+                        <th>Clase</th>
+                        <th>Tipo</th>
+                        <th>Corrección (si es incorrecta)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>.menu__item</code></td>
+                        <td>Elemento</td>
+                        <td>Correcto</td>
+                    </tr>
+                    <tr>
+                        <td><code>.menu__item--activo</code></td>
+                        <td>Modificador</td>
+                        <td>Correcto</td>
+                    </tr>
+                    <tr>
+                        <td><code>.menu__item__enlace</code></td>
+                        <td>Incorrecto</td>
+                        <td>Usar <code>.menu__enlace</code> (no anidar elementos)</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card.title</code></td>
+                        <td>Incorrecto</td>
+                        <td>Usar <code>.card__title</code> (doble guion bajo)</td>
+                    </tr>
+                    <tr>
+                        <td><code>.btn--large</code></td>
+                        <td>Modificador</td>
+                        <td>Correcto (pero debe usarse con <code>.btn</code>)</td>
+                    </tr>
+                    <tr>
+                        <td><code>.form__input--error</code></td>
+                        <td>Modificador de elemento</td>
+                        <td>Correcto</td>
+                    </tr>
+                    <tr>
+                        <td><code>.sidebar-widget-title</code></td>
+                        <td>Incorrecto</td>
+                        <td>Usar <code>.widget__titulo</code> (BEM con doble guion bajo)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>3.7 Barra de navegación BEM</h2>
+            <nav class="nav-bem">
+                <a href="#" class="nav-bem__logo">MiMarca</a>
+                <ul class="nav-bem__lista">
+                    <li class="nav-bem__item">
+                        <a href="#" class="nav-bem__enlace nav-bem__enlace--activo">Inicio</a>
+                    </li>
+                    <li class="nav-bem__item">
+                        <a href="#" class="nav-bem__enlace">Servicios</a>
+                    </li>
+                    <li class="nav-bem__item">
+                        <a href="#" class="nav-bem__enlace">Contacto</a>
+                    </li>
+                </ul>
+                <a href="#" class="nav-bem__boton">Registrarse</a>
+            </nav>
+        </section>
+
+        <section>
+            <h2>3.8 Tarjeta con tres modificadores</h2>
+            <article class="tarjeta-mod">
+                <h3 class="tarjeta-mod__titulo">Normal</h3>
+                <p class="tarjeta-mod__texto">Tarjeta estándar.</p>
+            </article>
+            <article class="tarjeta-mod tarjeta-mod--horizontal">
+                <img class="tarjeta-mod__imagen" src="https://picsum.photos/200/150?random=61" alt="">
+                <div class="tarjeta-mod__contenido">
+                    <h3 class="tarjeta-mod__titulo">Horizontal</h3>
+                    <p class="tarjeta-mod__texto">Imagen a la izquierda.</p>
+                </div>
+            </article>
+            <article class="tarjeta-mod tarjeta-mod--destacada">
+                <h3 class="tarjeta-mod__titulo">Destacada</h3>
+                <p class="tarjeta-mod__texto">Con borde azul.</p>
+            </article>
+            <article class="tarjeta-mod tarjeta-mod--oscura tarjeta-mod--horizontal">
+                <img class="tarjeta-mod__imagen" src="https://picsum.photos/200/150?random=62" alt="">
+                <div class="tarjeta-mod__contenido">
+                    <h3 class="tarjeta-mod__titulo">Oscura + Horizontal</h3>
+                    <p class="tarjeta-mod__texto">Combinación de modificadores.</p>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <h2>3.9 Refactoriza tu proyecto</h2>
+            <p class="explicacion">Ejemplo de refactorización: antes usabas <code>#menu a.activo</code> con <code>!important</code>, ahora usas <code>.menu__enlace--activo</code> con especificidad baja (0,1,0).</p>
+            <div class="comparacion">
+                <div class="comparacion__antes">
+                    <h4>Antes (alta especificidad)</h4>
+                    <code>#menu ul li a.activo { color: blue !important; }</code>
+                </div>
+                <div class="comparacion__despues">
+                    <h4>Después (BEM, especificidad baja)</h4>
+                    <code>.menu__enlace--activo { color: blue; }</code>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.10 Proyecto organizado y con linter</h2>
+            <article class="producto-final">
+                <img class="producto-final__imagen" src="https://picsum.photos/300/200?random=63" alt="">
+                <div class="producto-final__info">
+                    <h3 class="producto-final__nombre">Producto demo</h3>
+                    <p class="producto-final__precio">$99</p>
+                    <p class="producto-final__descripcion">Organizado en carpetas base/, componentes/ y utilidades/.</p>
+                    <button class="producto-final__boton">Comprar</button>
+                </div>
+            </article>
+            <div class="estructura-carpetas">
+                <pre>scss/
+├── base/
+│   ├── _variables.scss
+│   └── _reset.scss
+├── componentes/
+│   ├── _boton.scss
+│   └── _tarjeta.scss
+├── utilidades/
+│   └── _margenes.scss
+└── main.scss</pre>
+            </div>
+            <p class="explicacion">Instala Stylelint con <code>npm install -D stylelint stylelint-config-standard</code> y ejecuta <code>npx stylelint "**/*.css"</code> para verificar tu código.</p>
+        </section>
+    </main>
+</body>
+</html>

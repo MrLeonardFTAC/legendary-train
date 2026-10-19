@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agencia Creativa - Proyecto Integrador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <button class="btn-tema" id="btn-tema" aria-label="Cambiar tema">🌓</button>
+
+    <header class="header">
+        <div class="contenedor nav-wrapper">
+            <div class="logo">Agencia CSS</div>
+            <nav class="nav-links">
+                <a href="#servicios">Servicios</a>
+                <a href="#galeria">Galería</a>
+                <a href="#video">Video</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero contenedor">
+            <picture>
+                <source media="(min-width: 800px)" srcset="https://picsum.photos/1200/600?random=10">
+                <img src="https://picsum.photos/600/800?random=11" alt="Portada" class="hero-img">
+            </picture>
+            <h1 class="hero-titulo">Diseño Responsive sin Límites</h1>
+            <p class="hero-texto">Creamos experiencias digitales que se adaptan perfectamente a cualquier dispositivo.</p>
+            <a href="#servicios" class="btn">Ver Servicios</a>
+        </section>
+
+        <section id="servicios" class="seccion contenedor">
+            <h2>Nuestros Servicios</h2>
+            <div class="grid-servicios">
+                <div class="card">
+                    <h3>UI/UX Design</h3>
+                    <p>Interfaces intuitivas centradas en el usuario.</p>
+                </div>
+                <div class="card">
+                    <h3>Desarrollo Web</h3>
+                    <p>Código limpio, semántico y accesible.</p>
+                </div>
+                <div class="card">
+                    <h3>Consultoría</h3>
+                    <p>Optimización de rendimiento y SEO técnico.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="seccion contenedor">
+            <h2>Galería de Proyectos</h2>
+            <div class="galeria">
+                <img src="https://picsum.photos/800/800?random=1" 
+                     srcset="https://picsum.photos/400/400?random=1 400w,
+                             https://picsum.photos/800/800?random=1 800w,
+                             https://picsum.photos/1600/1600?random=1 1600w"
+                     sizes="(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw"
+                     alt="Proyecto 1">
+                <img src="https://picsum.photos/800/800?random=2" 
+                     srcset="https://picsum.photos/400/400?random=2 400w,
+                             https://picsum.photos/800/800?random=2 800w,
+                             https://picsum.photos/1600/1600?random=2 1600w"
+                     sizes="(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw"
+                     alt="Proyecto 2">
+                <img src="https://picsum.photos/800/800?random=3" 
+                     srcset="https://picsum.photos/400/400?random=3 400w,
+                             https://picsum.photos/800/800?random=3 800w,
+                             https://picsum.photos/1600/1600?random=3 1600w"
+                     sizes="(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw"
+                     alt="Proyecto 3">
+            </div>
+        </section>
+
+        <section id="video" class="seccion contenedor">
+            <h2>Mira nuestro Showreel</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Showreel" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto" class="footer">
+        <div class="contenedor">
+            <p>&copy; 2024 Agencia CSS. Todos los derechos reservados.</p>
+            <p>Contacto: <a href="mailto:hola@agenciacss.com">hola@agenciacss.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const html = document.documentElement;
+        const btnTema = document.getElementById('btn-tema');
+        const temaGuardado = localStorage.getItem('tema');
+        const sistemaOscuro = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        if (temaGuardado) {
+            html.setAttribute('data-theme', temaGuardado);
+        } else if (sistemaOscuro) {
+            html.setAttribute('data-theme', 'dark');
+        }
+
+        btnTema.addEventListener('click', () => {
+            const actual = html.getAttribute('data-theme');
+            const nuevo = actual === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', nuevo);
+            localStorage.setItem('tema', nuevo);
+        });
+    </script>
+</body>
+</html>

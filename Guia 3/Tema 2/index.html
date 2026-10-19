@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tema 2</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!--primera media query-->
+        <h1>Redimensiona la ventana</h1>
+        <!--fin de la primera media query-->
+
+        <!--Rejilla de 1, 2 y 4 columnas-->
+        <div class="galeria">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+        <!--fin de la rejilla-->
+
+        <!--Barra lateral que baja en móvil-->
+        <div class="pagina">
+            <main>Contenido principal</main>
+            <aside>Barra lateral</aside>
+        </div>
+        <!--fin de la barra lateral-->
+
+        <!--max-width y sintaxis de rangos-->
+        <div class="anuncio">Anuncio</div>
+        <p class="texto">Texto de ejemplo</p>
+        <!--fin de max-width y sintaxis de rangos-->
+
+        <!--Preferencias, mouse e impresión-->
+        <nav>Menú</nav>
+        <a class="btn" href="#">Botón</a>
+        <footer>Pie</footer>
+        <!--fin de preferencias, mouse e impresión-->
+        <h2>Galeria 1-2-3-4</h2>
+        <div class="galeria">
+        <div class="foto">1</div> <div class="foto">2</div>
+        <div class="foto">3</div> <div class="foto">4</div>
+        <div class="foto">5</div> <div class="foto">6</div>
+        <div class="foto">7</div> <div class="foto">8</div>
+        <div class="foto">9</div> <div class="foto">10</div>
+        <div class="foto">11</div> <div class="foto">12</div>
+        </div>
+        <br>
+        <h2>Blog Responsive</h2>
+        <header class="cabecera">
+        <h1 class="titulo-blog">Mi Blog Responsive</h1>
+        </header>
+        <div class="pagina">
+        <main class="contenido">
+            <article>
+            <h2>Artículo principal</h2>
+            <p>Contenido del artículo que se adapta a cualquier pantalla...</p>
+            </article>
+        </main>
+        <aside class="barra-lateral">
+            <h3>Categorías</h3>
+            <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            </ul>
+        </aside>
+        </div>
+        <h1>Breakpoints por contenido</h1>
+        <div class="tarjetas-contenido">
+        <div class="tarjeta-c">
+            <h3>Tarjeta con texto largo</h3>
+            <p>Este es un texto de ejemplo que nos ayudará a ver cuándo el diseño se rompe. Arrastra la ventana del navegador para observar el comportamiento.</p>
+        </div>
+        <div class="tarjeta-c">
+            <h3>Otra tarjeta</h3>
+            <p>Más contenido de prueba para justificar los breakpoints basados en el contenido y no en dispositivos específicos.</p>
+        </div>
+        <div class="tarjeta-c">
+            <h3>Tercera tarjeta</h3>
+            <p>Observa cómo las líneas de texto se vuelven demasiado largas o demasiado cortas en ciertos anchos.</p>
+        </div>
+        </div>
+        <h1>Hoja de impresión</h1>
+        <header class="header-print">
+        <nav class="nav-print">
+            <a href="#">Inicio</a>
+            <a href="#">Artículos</a>
+            <a href="#">Contacto</a>
+        </nav>
+        </header>
+
+        <main class="articulo">
+        <h1>Guía de impresión en CSS</h1>
+        <p class="autor">Por Dr. Lino Quispe</p>
+        
+        <p>Este es un artículo de ejemplo para demostrar cómo funcionan los estilos de impresión con <code>@media print</code>. Visita <a href="https://developer.mozilla.org">MDN Web Docs</a> para más información.</p>
+        
+        <p>También puedes consultar la <a href="https://css-tricks.com">guía de CSS Tricks</a> sobre este tema.</p>
+        </main>
+
+        <footer class="footer-print">
+        <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>

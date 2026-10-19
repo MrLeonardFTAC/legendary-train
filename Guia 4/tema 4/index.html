@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tema 4: Transiciones con transition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Tema 4: Transiciones con transition</h1>
+
+        <section>
+            <h2>4.1 Transición básica</h2>
+            <a class="btn-basico" href="#">Suscribirme</a>
+        </section>
+
+        <section>
+            <h2>4.2 Varias propiedades: tarjeta que se eleva</h2>
+            <article class="tarjeta-eleva">
+                <h3>Plan Pro</h3>
+                <p>Todo lo que necesitas.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>4.3 Curvas de aceleración</h2>
+            <div class="pista">
+                <div class="bola linear">linear</div>
+                <div class="bola ease-in">ease-in</div>
+                <div class="bola ease-out">ease-out</div>
+                <div class="bola rebote">cubic-bezier</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>4.4 Mostrar y ocultar con transición</h2>
+            <div class="dropdown">
+                <button>Cursos</button>
+                <ul class="menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>4.5 Subrayado animado y movimiento reducido</h2>
+            <a class="enlace" href="#">Leer más</a>
+        </section>
+
+        <section>
+            <h2>4.6 ¿Qué se puede animar?</h2>
+            <table class="tabla-animar">
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>¿Se anima?</th>
+                        <th>Observaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>opacity</code></td>
+                        <td>Sí</td>
+                        <td>Animación suave y eficiente (GPU).</td>
+                    </tr>
+                    <tr>
+                        <td><code>transform</code></td>
+                        <td>Sí</td>
+                        <td>Animación eficiente (GPU), ideal para movimiento.</td>
+                    </tr>
+                    <tr>
+                        <td><code>width</code> (100px → 300px)</td>
+                        <td>Sí</td>
+                        <td>Funciona, pero recalcula el layout (más costoso).</td>
+                    </tr>
+                    <tr>
+                        <td><code>height</code> (0 → auto)</td>
+                        <td>No</td>
+                        <td>No se puede animar a <code>auto</code>. Alternativa: usar <code>max-height</code> o <code>transform: scaleY()</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>display</code> (none → block)</td>
+                        <td>No</td>
+                        <td>No se puede animar. Alternativa: usar <code>opacity</code> + <code>visibility</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>background-color</code></td>
+                        <td>Sí</td>
+                        <td>Transición suave entre colores.</td>
+                    </tr>
+                    <tr>
+                        <td><code>font-size</code></td>
+                        <td>Sí</td>
+                        <td>Funciona, pero puede afectar el layout.</td>
+                    </tr>
+                    <tr>
+                        <td><code>top</code> (con position)</td>
+                        <td>Sí</td>
+                        <td>Funciona, pero <code>transform: translateY()</code> es más eficiente.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="demo-animar">
+                <div class="demo-box demo-opacity">opacity</div>
+                <div class="demo-box demo-width">width</div>
+                <div class="demo-box demo-bg">background-color</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>4.7 Botones con microinteracciones</h2>
+            <div class="grid-botones-micro">
+                <button class="btn-relleno">
+                    <span class="btn-relleno-bg"></span>
+                    <span class="btn-relleno-texto">Relleno deslizante</span>
+                </button>
+                <button class="btn-eleva">Se eleva</button>
+                <button class="btn-icono">
+                    Ir al sitio
+                    <span class="flecha">→</span>
+                </button>
+            </div>
+        </section>
+
+        <section>
+            <h2>4.8 Menú desplegable animado</h2>
+            <nav class="nav-demo">
+                <ul class="nav-lista">
+                    <li><a href="#">Inicio</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#">Servicios ▾</a>
+                        <ul class="submenu">
+                            <li><a href="#">Diseño Web</a></li>
+                            <li><a href="#">Desarrollo</a></li>
+                            <li><a href="#">Consultoría</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section>
+            <h2>4.9 Tarjeta con panel que se revela</h2>
+            <div class="tarjeta-revela">
+                <img src="https://picsum.photos/400/300?random=51" alt="Proyecto">
+                <div class="panel-revela">
+                    <h3>Proyecto Destacado</h3>
+                    <p>Descripción del proyecto que se revela al pasar el mouse.</p>
+                    <a href="#">Ver más</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>4.10 Interruptor (toggle switch)</h2>
+            <div class="toggle-container">
+                <label class="toggle">
+                    <input type="checkbox">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label">Modo oscuro</span>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

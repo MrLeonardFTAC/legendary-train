@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tema 1: CSS moderno</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Tema 1: CSS moderno</h1>
+
+        <section>
+            <h2>1.1 Anidamiento básico</h2>
+            <article class="tarjeta">
+                <h3>Título</h3>
+                <p>Texto de la tarjeta.</p>
+            </article>
+            <article class="tarjeta destacada">
+                <h3>Tarjeta destacada</h3>
+                <p>Pasa el mouse para ver el efecto.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>1.2 Container queries</h2>
+            <div class="caja-estrecha">
+                <article class="tarjeta-cq">
+                    <div class="icono-cq">★</div>
+                    <div>
+                        <h3>Contenedor estrecho</h3>
+                        <p>Esta tarjeta está en un contenedor de 280px.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="caja-ancha">
+                <article class="tarjeta-cq">
+                    <div class="icono-cq">★</div>
+                    <div>
+                        <h3>Contenedor ancho</h3>
+                        <p>Esta tarjeta está en un contenedor de 600px o más.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>1.3 :is() y :where()</h2>
+            <article class="articulo">
+                <h1>Título principal</h1>
+                <h2>Subtítulo</h2>
+                <h3>Sección</h3>
+                <ul>
+                    <li>Con viñetas</li>
+                    <li>Con viñetas</li>
+                </ul>
+                <ul class="limpia">
+                    <li>Sin viñetas</li>
+                    <li>Sin viñetas</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>1.4 :has() - el selector padre</h2>
+            <label class="opcion">
+                <input type="radio" name="plan"> Plan básico
+            </label>
+            <label class="opcion">
+                <input type="radio" name="plan" checked> Plan pro
+            </label>
+            
+            <form class="form">
+                <input type="email" required placeholder="Correo válido">
+                <button class="enviar">Enviar</button>
+            </form>
+
+            <article class="tarjeta-img">
+                <img src="https://picsum.photos/120/120?random=50" alt="">
+                <p>Tarjeta con imagen (usa :has)</p>
+            </article>
+            <article class="tarjeta-img">
+                <p>Tarjeta sin imagen</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>1.5 @layer - control de cascada</h2>
+            <a class="btn rojo" href="#">Botón rojo (utilidad gana)</a>
+            <a class="btn" href="#">Botón normal</a>
+        </section>
+
+        <section>
+            <h2>1.6 Anidamiento aplicado</h2>
+            <article class="producto">
+                <h3 class="producto__nombre">Zapatillas</h3>
+                <p class="producto__precio">$99</p>
+                <p class="producto__desc">Cómodas y ligeras.</p>
+                <a class="producto__btn" href="#">Comprar</a>
+            </article>
+        </section>
+
+        <section>
+            <h2>1.7 Especificidad de :is() y :where()</h2>
+            <table class="tabla-especificidad">
+                <thead>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Especificidad (a,b,c)</th>
+                        <th>¿Por qué?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>:is(.a, #b) p</code></td>
+                        <td>(1, 0, 1)</td>
+                        <td>:is toma la mayor (#b = 1,0,0) + p (0,0,1)</td>
+                    </tr>
+                    <tr>
+                        <td><code>:where(.a, #b) p</code></td>
+                        <td>(0, 0, 1)</td>
+                        <td>:where aporta 0 + p (0,0,1)</td>
+                    </tr>
+                    <tr>
+                        <td><code>.a:is(h1, h2)</code></td>
+                        <td>(0, 1, 0)</td>
+                        <td>.a (0,1,0) + :is con h1/h2 (0,0,0)</td>
+                    </tr>
+                    <tr>
+                        <td><code>:where(.a).b</code></td>
+                        <td>(0, 1, 0)</td>
+                        <td>:where aporta 0 + .b (0,1,0)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="demo-especificidad">
+                <div class="a">
+                    <p>Prueba con :is(.a, #b) p</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>1.8 Formulario inteligente con :has()</h2>
+            <form class="form-inteligente">
+                <div class="campo">
+                    <label>Nombre</label>
+                    <input type="text" required minlength="3" placeholder="Mínimo 3 caracteres">
+                </div>
+                <div class="campo">
+                    <label>Correo</label>
+                    <input type="email" required placeholder="correo@ejemplo.com">
+                </div>
+                <div class="campo">
+                    <label>
+                        <input type="checkbox" class="check-destacar"> Destacar esta tarjeta
+                    </label>
+                    <div class="tarjeta-destacable">
+                        <p>Contenido de la tarjeta</p>
+                    </div>
+                </div>
+                <button class="btn-enviar">Enviar formulario</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>1.9 Componente con container query</h2>
+            <div class="sidebar">
+                <h3>Sidebar (280px)</h3>
+                <article class="producto-cq">
+                    <img src="https://picsum.photos/300/200?random=51" alt="">
+                    <div class="producto-cq-info">
+                        <h4>Producto A</h4>
+                        <p>$49</p>
+                    </div>
+                </article>
+            </div>
+            <div class="contenido-principal">
+                <h3>Contenido principal (ancho)</h3>
+                <article class="producto-cq">
+                    <img src="https://picsum.photos/300/200?random=52" alt="">
+                    <div class="producto-cq-info">
+                        <h4>Producto B</h4>
+                        <p>$79</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>1.10 Conflictos con @layer</h2>
+            <nav id="menu">
+                <a class="enlace" href="#">Enlace 1</a>
+                <a class="enlace" href="#">Enlace 2</a>
+                <a class="enlace" href="#">Enlace 3</a>
+            </nav>
+            <p class="explicacion">El enlace se ve verde porque la capa <code>utilidades</code> gana sobre <code>base</code>, aunque el selector <code>#menu a</code> tenga mayor especificidad.</p>
+        </section>
+    </main>
+</body>
+</html>

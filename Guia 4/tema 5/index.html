@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tema 5: Animaciones con @keyframes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Tema 5: Animaciones con @keyframes</h1>
+
+        <section>
+            <h2>5.1 Pulso: corazón latiendo</h2>
+            <div class="corazon">&hearts;</div>
+        </section>
+
+        <section>
+            <h2>5.2 Spinner de carga</h2>
+            <div class="spinner" role="status" aria-label="Cargando"></div>
+        </section>
+
+        <section>
+            <h2>5.3 Entrada escalonada con fill-mode</h2>
+            <div class="items-entrada">
+                <div class="item">Uno</div>
+                <div class="item">Dos</div>
+                <div class="item">Tres</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>5.4 Pelota que rebota</h2>
+            <div class="escena-rebote">
+                <div class="pelota"></div>
+                <div class="suelo"></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>5.5 Esqueleto de carga (skeleton)</h2>
+            <div class="esqueleto-card">
+                <div class="esqueleto-avatar"></div>
+                <div class="esqueleto-linea"></div>
+                <div class="esqueleto-linea corta"></div>
+                <div class="esqueleto-linea"></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>5.6 Descifra el atajo animation</h2>
+            <p>Atajo: <code>animation: latido 2s ease-in-out 0.5s 3 alternate both;</code></p>
+            <table class="tabla-animation">
+                <thead>
+                    <tr>
+                        <th>Propiedad y valor</th>
+                        <th>¿Qué ocurre?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>animation-iteration-count: infinite</code></td>
+                        <td>La animación se repite indefinidamente, sin detenerse.</td>
+                    </tr>
+                    <tr>
+                        <td><code>animation-direction: alternate</code></td>
+                        <td>Alterna el sentido: ciclo normal, luego inverso, luego normal, etc.</td>
+                    </tr>
+                    <tr>
+                        <td><code>animation-fill-mode: forwards</code></td>
+                        <td>Mantiene los estilos del último keyframe después de terminar.</td>
+                    </tr>
+                    <tr>
+                        <td><code>animation-play-state: paused (al hover)</code></td>
+                        <td>Pausa la animación mientras el mouse está sobre el elemento.</td>
+                    </tr>
+                    <tr>
+                        <td><code>animation-delay: -1s</code></td>
+                        <td>Adelanta la animación 1 segundo, como si hubiera empezado antes.</td>
+                    </tr>
+                    <tr>
+                        <td><code>animation-timing-function: steps(4)</code></td>
+                        <td>Divide la animación en 4 pasos discretos (efecto "stop motion").</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="demo-animation">
+                <div class="demo-box demo-infinite">infinite</div>
+                <div class="demo-box demo-alternate">alternate</div>
+                <div class="demo-box demo-forwards">forwards</div>
+                <div class="demo-box demo-paused">paused (hover)</div>
+                <div class="demo-box demo-delay">delay -1s</div>
+                <div class="demo-box demo-steps">steps(4)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>5.7 Barra de progreso</h2>
+            <div class="barra-progreso-container">
+                <div class="barra-progreso-fill"></div>
+            </div>
+            <p class="leyenda">Se llena en 3 segundos y se queda al 100% (forwards).</p>
+        </section>
+
+        <section>
+            <h2>5.8 Notificación toast</h2>
+            <div class="toast">
+                ✅ Cambios guardados correctamente
+            </div>
+            <p class="leyenda">Entra, se queda y sale en una sola animación.</p>
+        </section>
+
+        <section>
+            <h2>5.9 Indicador "escribiendo..."</h2>
+            <div class="escribiendo">
+                <span class="punto"></span>
+                <span class="punto"></span>
+                <span class="punto"></span>
+            </div>
+        </section>
+
+        <section>
+            <h2>5.10 Hero animado</h2>
+            <div class="hero-animado">
+                <h1 class="hero-titulo-anim">Bienvenido</h1>
+                <p class="hero-subtitulo-anim">Una experiencia con movimiento suave</p>
+                <button class="hero-btn-anim">Comenzar</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,131 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: system-ui, Arial, sans-serif;
+    line-height: 1.6;
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+.contenedor {
+    width: min(90%, 1100px);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+// 2.1 Variables y anidamiento
+.nav {
+    display: flex;
+    gap: 1rem;
+    
+    a {
+        padding: 0.5rem 1rem;
+        color: v.$primario;
+        border-radius: v.$radio;
+        text-decoration: none;
+        
+        &:hover {
+            background: rgba(v.$primario, 0.1);
+        }
+    }
+}
+
+// 2.2 Mixins con parámetros
+.btn-primario { @include m.boton(v.$primario); }
+.btn-claro { @include m.boton(#e2e8f0, #0f172a); }
+.btn-peligro { @include m.boton(#dc2626); }
+
+// 2.3 Mixin de breakpoints
+.galeria {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    
+    div {
+        padding: 2rem;
+        background: #c7d2fe;
+        text-align: center;
+        border-radius: 8px;
+    }
+    
+    @include m.desde(md) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+// 2.4 Bucles con @each
+$colores: (
+    primario: #2563eb,
+    exito: #16a34a,
+    peligro: #dc2626,
+);
+
+@each $nombre, $valor in $colores {
+    .bg-#{$nombre} { background: $valor; }
+    .texto-#{$nombre} { color: $valor; }
+}
+
+.texto-blanco { color: white; }
+
+// 2.5 Parciales
+.tarjeta {
+    @include m.tarjeta;
+    color: v.$primario;
+}
+
+// 2.8 Biblioteca de mixins
+.centro-demo {
+    @include m.flex-centro;
+    height: 100px;
+    background: #e0e7ff;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-custom {
+    @include m.tarjeta(16px, 0 4px 12px rgba(0,0,0,0.1));
+    margin-bottom: 1rem;
+}
+
+.truncado {
+    @include m.texto-truncado(300px);
+    padding: 0.5rem;
+    background: #f1f5f9;
+    border-radius: 6px;
+}
+
+// 2.9 Utilidades con @each y @for
+@for $i from 1 through 5 {
+    .m-#{$i} { margin: $i * 0.25rem; }
+}
+
+@each $valor in 25, 50, 75, 100 {
+    .w-#{$valor} { width: percentage($valor / 100); }
+}
+
+// 2.10 Arquitectura de parciales
+.producto-final {
+    @include m.tarjeta;
+    
+    &__nombre { margin: 0 0 0.5rem; }
+    &__precio {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: v.$primario;
+        margin: 0 0 0.5rem;
+    }
+    &__desc {
+        color: #475569;
+        margin: 0 0 1rem;
+    }
+}
+
+.btn-final {
+    @include m.boton(v.$primario);
+    border: none;
+    cursor: pointer;
+}

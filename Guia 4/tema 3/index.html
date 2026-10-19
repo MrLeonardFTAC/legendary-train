@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tema 3: Transformaciones con transform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Tema 3: Transformaciones con transform</h1>
+
+        <section>
+            <h2>3.1 translate frente a position: relative</h2>
+            <div class="cajas-translate">
+                <div class="caja">A</div>
+                <div class="caja b">B</div>
+                <div class="caja">C</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.2 scale: zoom en tarjetas</h2>
+            <div class="tarjeta-scale">Pasa el mouse</div>
+            <div class="espejo">Texto espejo</div>
+        </section>
+
+        <section>
+            <h2>3.3 rotate y skew</h2>
+            <div class="rombo"></div>
+            <div class="cinta"><span>Oferta</span></div>
+        </section>
+
+        <section>
+            <h2>3.4 transform-origin y orden de las funciones</h2>
+            <div class="reloj-demo">
+                <div class="manecilla-demo"></div>
+            </div>
+            <div class="cajas-orden">
+                <div class="caja-orden a">A</div>
+                <div class="caja-orden b">B</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.5 Efecto 3D: tarjeta que se voltea</h2>
+            <div class="tarjeta-3d">
+                <div class="interior-3d">
+                    <div class="frente-3d">Frente</div>
+                    <div class="dorso-3d">Dorso</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.6 Predice el efecto</h2>
+            <table class="tabla-prediccion">
+                <thead>
+                    <tr>
+                        <th>transform</th>
+                        <th>Efecto observado</th>
+                        <th>¿Cambia el espacio en el flujo?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>translateX(50px)</code></td>
+                        <td>Desplaza la caja 50px a la derecha</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><code>translateY(-100%)</code></td>
+                        <td>Desplaza la caja hacia arriba su propia altura</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><code>scale(2)</code></td>
+                        <td>Duplica el tamaño (ancho y alto)</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><code>scale(0.5, 1)</code></td>
+                        <td>Reduce el ancho a la mitad, mantiene el alto</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><code>rotate(90deg)</code></td>
+                        <td>Gira la caja 90 grados en sentido horario</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><code>skewY(20deg)</code></td>
+                        <td>Inclina la caja 20 grados en el eje Y</td>
+                        <td>No</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="demo-transforms">
+                <div class="demo-box demo-translateX">translateX</div>
+                <div class="demo-box demo-translateY">translateY</div>
+                <div class="demo-box demo-scale">scale</div>
+                <div class="demo-box demo-scaleXY">scale(0.5,1)</div>
+                <div class="demo-box demo-rotate">rotate</div>
+                <div class="demo-box demo-skew">skewY</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.7 Reloj analógico</h2>
+            <div class="reloj">
+                <div class="manecilla hora"></div>
+                <div class="manecilla minuto"></div>
+                <div class="manecilla segundo"></div>
+                <div class="centro"></div>
+            </div>
+            <p class="hora-texto">10:10:30</p>
+        </section>
+
+        <section>
+            <h2>3.8 El orden importa</h2>
+            <div class="cajas-orden-comparacion">
+                <div class="caja-comparacion orden1">
+                    <p>translate → rotate → scale</p>
+                </div>
+                <div class="caja-comparacion orden2">
+                    <p>scale → rotate → translate</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.9 Galería con zoom</h2>
+            <div class="galeria-zoom">
+                <div class="marco-zoom">
+                    <img src="https://picsum.photos/400/300?random=41" alt="Foto 1">
+                </div>
+                <div class="marco-zoom">
+                    <img src="https://picsum.photos/400/300?random=42" alt="Foto 2">
+                </div>
+                <div class="marco-zoom">
+                    <img src="https://picsum.photos/400/300?random=43" alt="Foto 3">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.10 Tarjeta giratoria de perfil</h2>
+            <div class="tarjeta-perfil" tabindex="0">
+                <div class="interior-perfil">
+                    <div class="frente-perfil">
+                        <img src="https://picsum.photos/200/200?random=44" alt="Foto de perfil" class="avatar-perfil">
+                        <h3>Juan Pérez</h3>
+                        <p>Desarrollador Web</p>
+                    </div>
+                    <div class="dorso-perfil">
+                        <h3>Contacto</h3>
+                        <p>📧 juan@ejemplo.com</p>
+                        <p>📱 +51 999 888 777</p>
+                        <p>🌐 juanperez.dev</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

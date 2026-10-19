@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portafolio - Ana García</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor nav-wrapper">
+            <div class="logo">Ana García</div>
+            <nav class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <label class="toggle-tema">
+                <input type="checkbox" id="toggle-tema">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="contenedor hero-contenido">
+                <h1 class="hero-titulo">Diseño interfaces que enamoran</h1>
+                <p class="hero-subtitulo">UX/UI Designer con 6 años creando experiencias digitales memorables</p>
+                <a href="#proyectos" class="btn-principal">
+                    <span class="btn-bg"></span>
+                    <span class="btn-texto">Ver proyectos</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="proyectos" class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Proyectos destacados</h2>
+                <div class="grid-proyectos">
+                    <article class="tarjeta-proyecto">
+                        <img src="https://picsum.photos/400/300?random=101" alt="Proyecto 1">
+                        <div class="tarjeta-info">
+                            <h3>App Bancaria</h3>
+                            <p>Rediseño completo de la experiencia móvil para un banco digital.</p>
+                            <a href="https://ejemplo.com/proyecto1" target="_blank">Ver caso</a>
+                        </div>
+                    </article>
+                    <article class="tarjeta-proyecto">
+                        <img src="https://picsum.photos/400/300?random=102" alt="Proyecto 2">
+                        <div class="tarjeta-info">
+                            <h3>E-commerce Moda</h3>
+                            <p>Tienda online con foco en conversión y accesibilidad.</p>
+                            <a href="https://ejemplo.com/proyecto2" target="_blank">Ver caso</a>
+                        </div>
+                    </article>
+                    <article class="tarjeta-proyecto">
+                        <img src="https://picsum.photos/400/300?random=103" alt="Proyecto 3">
+                        <div class="tarjeta-info">
+                            <h3>Dashboard SaaS</h3>
+                            <p>Panel de control con visualización de datos complejos.</p>
+                            <a href="https://ejemplo.com/proyecto3" target="_blank">Ver caso</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion seccion-tarjeta-3d">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Pasa el mouse o enfoca con Tab</h2>
+                <div class="tarjeta-3d" tabindex="0">
+                    <div class="tarjeta-3d-interior">
+                        <div class="tarjeta-3d-frente">
+                            <h3>¿Hablamos?</h3>
+                            <p class="emoji-grande">💬</p>
+                        </div>
+                        <div class="tarjeta-3d-dorso">
+                            <h3>Contacto</h3>
+                            <p>📧 hola@anagarcia.dev</p>
+                            <p>📱 +51 987 654 321</p>
+                            <p>🌐 anagarcia.dev</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Sobre mí</h2>
+                <article class="articulo-editorial">
+                    <p class="primer-parrafo">Comencé mi carrera en el diseño hace más de una década, fascinada por la intersección entre la estética y la funcionalidad. A lo largo de los años he trabajado con startups, agencias y grandes empresas, siempre buscando crear productos que no solo se vean bien, sino que realmente resuelvan problemas reales de las personas.</p>
+                    <p>Mi enfoque combina investigación de usuarios, diseño centrado en la accesibilidad y una obsesión sana por los detalles. Creo firmemente que el buen diseño es invisible: cuando algo funciona bien, el usuario ni siquiera lo nota.</p>
+                    <blockquote class="cita-editorial">El diseño no es solo cómo se ve, sino cómo funciona.</blockquote>
+                    <p>Puedes encontrar más de mi trabajo en <a href="https://dribbble.com" target="_blank">Dribbble</a> y <a href="https://behance.net" target="_blank">Behance</a>. También escribo sobre diseño en <a href="https://medium.com" target="_blank">Medium</a>.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Cargando experiencia...</h2>
+                <div class="grid-skeleton">
+                    <div class="skeleton-card">
+                        <div class="skeleton-img"></div>
+                        <div class="skeleton-linea"></div>
+                        <div class="skeleton-linea corta"></div>
+                        <div class="skeleton-linea"></div>
+                    </div>
+                    <div class="skeleton-card">
+                        <div class="skeleton-img"></div>
+                        <div class="skeleton-linea"></div>
+                        <div class="skeleton-linea corta"></div>
+                        <div class="skeleton-linea"></div>
+                    </div>
+                    <div class="skeleton-card">
+                        <div class="skeleton-img"></div>
+                        <div class="skeleton-linea"></div>
+                        <div class="skeleton-linea corta"></div>
+                        <div class="skeleton-linea"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto" class="footer">
+        <div class="contenedor">
+            <p>&copy; 2026 Ana García. Diseñado con ❤️ y mucho CSS.</p>
+            <p>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a> · 
+                <a href="https://github.com" target="_blank">GitHub</a> · 
+                <a href="mailto:hola@anagarcia.dev">Email</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const html = document.documentElement;
+        const toggle = document.getElementById('toggle-tema');
+        const temaGuardado = localStorage.getItem('tema');
+        const sistemaOscuro = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        if (temaGuardado) {
+            html.setAttribute('data-theme', temaGuardado);
+            toggle.checked = temaGuardado === 'dark';
+        } else if (sistemaOscuro) {
+            html.setAttribute('data-theme', 'dark');
+            toggle.checked = true;
+        }
+
+        toggle.addEventListener('change', () => {
+            const nuevo = toggle.checked ? 'dark' : 'light';
+            html.setAttribute('data-theme', nuevo);
+            localStorage.setItem('tema', nuevo);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+body {
+ background: #fee2e2; /* menos de 600px */
+}
+@media (min-width: 600px) {
+ body { background: #dcfce7; } /* 600px o más */
+}
+@media (min-width: 1000px) {
+ body { background: #dbeafe; } /* 1000px o más */
+}
+
+.galeria {
+ display: grid;
+ gap: 1rem;
+ grid-template-columns: 1fr;
+}
+.galeria div {
+ padding: 2rem;
+ background: #fde68a;
+ text-align: center;
+}
+@media (min-width: 600px) {
+ .galeria { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1000px) {
+ .galeria { grid-template-columns: repeat(4, 1fr); }
+}
+
+.pagina {
+ display: grid;
+ gap: 1rem;
+}
+main, aside {
+ padding: 1.5rem;
+ background: #e5e7eb;
+}
+@media (min-width: 800px) {
+ .pagina {
+ grid-template-columns: 1fr 280px;
+ gap: 2rem;
+ }
+}
+
+@media (max-width: 599px) {
+ .anuncio { display: none; }
+}
+/* Sintaxis moderna de rangos */
+@media (600px <= width < 900px) {
+ .texto { color: #b91c1c; }
+}
+/* Equivalente clásico */
+@media (min-width: 600px) and (max-width: 899px) {
+ .texto { color: #b91c1c; }
+}
+
+.btn {
+ display: inline-block;
+ padding: 0.6rem 1rem;
+ background: #2563eb;
+ color: white;
+ transition: background 0.3s;
+}
+@media (hover: hover) {
+ .btn:hover { background: #1d4ed8; }
+}
+@media (prefers-reduced-motion: reduce) {
+ * {
+ animation: none !important;
+ transition: none !important;
+ }
+}
+@media print {
+ nav, footer { display: none; }
+ body { color: black; background: white; }
+}
+
+body { background: #fee2e2; } /* Base: menos de 768px */
+
+@media (min-width: 768px) {
+  body { background: #dcfce7; } /* Verde: 768px o más */
+}
+@media (max-width: 480px) {
+  body { background: #fef08a; } /* Amarillo: 480px o menos */
+}
+
+/* Base: Móvil (1 columna) */
+.galeria {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  padding: 1rem;
+}
+.foto {
+  padding: 2rem;
+  background: #fde68a;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* 480px: 2 columnas */
+@media (min-width: 480px) {
+  .galeria { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* 768px: 3 columnas */
+@media (min-width: 768px) {
+  .galeria { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* 1024px: 4 columnas */
+@media (min-width: 1024px) {
+  .galeria { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Base: Móvil (todo apilado) */
+body { margin: 0; font-family: system-ui, sans-serif; }
+
+.cabecera {
+  background: #0f172a;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Título con 3 tramos usando clamp() */
+.titulo-blog {
+  margin: 0;
+  font-size: clamp(1.25rem, 4vw, 3rem);
+}
+
+.pagina {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+main, aside {
+  padding: 1.5rem;
+  background: #f1f5f9;
+  border-radius: 8px;
+}
+
+/* Escritorio (desde 800px): 2 columnas */
+@media (min-width: 800px) {
+  .pagina {
+    grid-template-columns: 1fr 280px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.tarjetas-contenido {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  grid-template-columns: 1fr; /* Móvil: 1 columna */
+}
+
+.tarjeta-c {
+  padding: 1.5rem;
+  background: #e0e7ff;
+  border-radius: 8px;
+}
+
+/* Breakpoint 1: 520px (no 480px) */
+/* Justificación: A 480px las tarjetas aún se ven bien en 1 columna, 
+   pero a 520px el texto empieza a ser muy largo y difícil de leer. */
+@media (min-width: 520px) {
+  .tarjetas-contenido {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Breakpoint 2: 850px (no 768px) */
+/* Justificación: A 768px las 2 columnas aún tienen buen espaciado. 
+   A 850px las columnas se ven muy separadas y hay mucho espacio vacío. */
+@media (min-width: 850px) {
+  .tarjetas-contenido {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Estilos normales (pantalla) */
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.header-print {
+  background: #0f172a;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.nav-print a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.articulo {
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.footer-print {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #e2e8f0;
+  text-align: center;
+}
+
+/* ===== ESTILOS DE IMPRESIÓN ===== */
+@media print {
+  /* Ocultar navegación y pie de página */
+  .header-print, .footer-print, .nav-print {
+    display: none;
+  }
+
+  /* Fondo blanco y texto negro para ahorrar tinta */
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  /* Quitar fondos y bordes decorativos */
+  .articulo {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  /* Mostrar las URLs de los enlaces */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.9em;
+    color: #555;
+    font-style: italic;
+  }
+
+  /* Evitar saltos de página dentro de párrafos */
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Evitar saltos después de títulos */
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+}
